@@ -6,7 +6,7 @@ data class SuperHeroe(
     val origen:String,
     val imagenLink:String,
     val poder:String,
-    val anioCreacion:Int,
+    val Año_creacion:Int,
     val color:String?,
     val traduccion:Boolean?
 
