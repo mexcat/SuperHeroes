@@ -1,12 +1,17 @@
 package cl.gencina.superheroes.vista
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import cl.gencina.superheroes.R
+import cl.gencina.superheroes.data.local.SuperHeroeEntity
 import cl.gencina.superheroes.databinding.FragmentDetalleSuperHeroeBinding
 import coil.load
 
@@ -47,7 +52,33 @@ class DetalleSuperHeroeFragment : Fragment() {
                     }else{
                         getString(R.string.traduccion_no)
                     }
+                binding.fabCorreo.setOnClickListener {_ ->
+                    enviarCorreo(it)
+                }
             }
+        }
+    }
+
+    private fun enviarCorreo(superHeroeEntity: SuperHeroeEntity) {
+        val email = getString(R.string.direccion_email)
+        val emailIntent = Intent(Intent.ACTION_SEND, Uri.parse(email))
+        emailIntent.type = getString(R.string.text_plain)
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.titulo_email,
+            superHeroeEntity.nombre)  )
+        emailIntent.putExtra(
+            Intent.EXTRA_TEXT, getString(
+            R.string.cuerpo_email,
+                superHeroeEntity.nombre
+        ))
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
+        try {
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.enviar_email)))
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(
+                context,
+                getString(R.string.no_existe__cliente_de_email_instalado),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }

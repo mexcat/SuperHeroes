@@ -9,4 +9,12 @@
     <string name="color">Color:</string>
     <string name="traduccion_si">Cuenta con traducción al español</string>
     <string name="traduccion_no">Sin traducción</string>
+    <string name="direccion_email">Comicconchile@hotmail.cl</string>
+    <string name="text_plain">text/plain</string>
+    <string name="titulo_email">Votacion %1$s</string>
+    <string name="cuerpo_email">Hola\nQuiero que el siguiente super heroes %1$s aparezca, en la nueva edición de biografías animadas.\n Número de contacto:________ \nGracias. </string>
+    <string name="no_existe__cliente_de_email_instalado">No existe ningún cliente de email instalado!.</string>
+    <string name="enviar_email">Enviar email.</string>
+
+
 </resources>
