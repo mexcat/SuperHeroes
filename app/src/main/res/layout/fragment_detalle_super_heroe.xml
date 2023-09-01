@@ -5,16 +5,17 @@
     android:id="@+id/fl_detalle_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vista.DetalleSuperHeroeFragment" >
+    tools:context=".vista.DetalleSuperHeroeFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_detalle"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:cardBackgroundColor="@color/dark_primary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_detalle"
@@ -31,142 +32,173 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_nombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/nombre"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/iv_detalle"
-                app:layout_constraintTop_toBottomOf="@+id/iv_detalle" />
 
-            <TextView
-                android:id="@+id/tv_nombre_detalle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/tv_nombre"
-                app:layout_constraintTop_toBottomOf="@+id/iv_detalle" />
-
-            <TextView
-                android:id="@+id/tv_origen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/origen"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/tv_nombre"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_detalle" />
-
-            <TextView
-                android:id="@+id/tv_origen_detalle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/iv_detalle"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/tv_origen"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_detalle" />
-
-            <TextView
-                android:id="@+id/tv_poder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/poder"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/tv_origen"
-                app:layout_constraintTop_toBottomOf="@+id/tv_origen_detalle" />
-
-            <TextView
-                android:id="@+id/tv_poder_detalle"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_detalle_texto"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="32dp"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/tv_poder"
-                app:layout_constraintTop_toBottomOf="@+id/tv_origen_detalle" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_detalle">
 
-            <TextView
-                android:id="@+id/tv_anio_creacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/anio_de_creacion"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/tv_poder"
-                app:layout_constraintTop_toBottomOf="@+id/tv_poder_detalle" />
 
-            <TextView
-                android:id="@+id/tv_anio_creacion_detalle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/tv_anio_creacion"
-                app:layout_constraintTop_toBottomOf="@+id/tv_poder_detalle" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/color"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/tv_anio_creacion"
-                app:layout_constraintTop_toBottomOf="@+id/tv_anio_creacion_detalle" />
+                    <TextView
+                        android:id="@+id/tv_nombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/nombre"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_color_detalle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/tv_color"
-                app:layout_constraintTop_toBottomOf="@+id/tv_anio_creacion_detalle" />
+                    <TextView
+                        android:id="@+id/tv_nombre_detalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_nombre"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_traduccion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:textColor="@color/primary_text"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/iv_detalle"
-                app:layout_constraintStart_toStartOf="@+id/tv_color"
-                app:layout_constraintTop_toBottomOf="@+id/tv_color" />
+                    <TextView
+                        android:id="@+id/tv_origen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/origen"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_nombre"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_detalle" />
+
+                    <TextView
+                        android:id="@+id/tv_origen_detalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/tv_origen"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_detalle" />
+
+                    <TextView
+                        android:id="@+id/tv_poder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/poder"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_origen"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_origen_detalle" />
+
+                    <TextView
+                        android:id="@+id/tv_poder_detalle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="32dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/tv_poder"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_origen_detalle" />
+
+                    <TextView
+                        android:id="@+id/tv_anio_creacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/anio_de_creacion"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_poder"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_poder_detalle" />
+
+                    <TextView
+                        android:id="@+id/tv_anio_creacion_detalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_anio_creacion"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_poder_detalle" />
+
+                    <TextView
+                        android:id="@+id/tv_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/color"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_anio_creacion"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_anio_creacion_detalle" />
+
+                    <TextView
+                        android:id="@+id/tv_color_detalle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_color"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_anio_creacion_detalle" />
+
+                    <TextView
+                        android:id="@+id/tv_traduccion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_color"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_color_detalle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_correo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/text_icon"
                 android:clickable="true"
+                android:foregroundTint="@color/text_icon"
+                android:foregroundTintMode="add"
                 android:src="@android:drawable/ic_dialog_email"
+                android:tint="@color/text_icon"
+                android:tintMode="screen"
+                app:backgroundTint="@color/accent_color"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="@color/text_icon"
+                app:useCompatPadding="true" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
