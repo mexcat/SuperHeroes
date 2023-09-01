@@ -37,6 +37,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/nombre"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/iv_detalle"
                 app:layout_constraintTop_toBottomOf="@+id/iv_detalle" />
 
@@ -46,6 +48,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/tv_nombre"
                 app:layout_constraintTop_toBottomOf="@+id/iv_detalle" />
 
@@ -55,8 +59,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/origen"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_nombre"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nombre" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_detalle" />
 
             <TextView
                 android:id="@+id/tv_origen_detalle"
@@ -64,8 +70,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_detalle"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/tv_origen"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nombre" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_detalle" />
 
             <TextView
                 android:id="@+id/tv_poder"
@@ -73,17 +83,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/poder"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_origen"
-                app:layout_constraintTop_toBottomOf="@+id/tv_origen" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_origen_detalle" />
 
             <TextView
                 android:id="@+id/tv_poder_detalle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/tv_poder"
-                app:layout_constraintTop_toBottomOf="@+id/tv_origen" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_origen_detalle" />
 
             <TextView
                 android:id="@+id/tv_anio_creacion"
@@ -91,8 +108,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/anio_de_creacion"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_poder"
-                app:layout_constraintTop_toBottomOf="@+id/tv_poder" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_poder_detalle" />
 
             <TextView
                 android:id="@+id/tv_anio_creacion_detalle"
@@ -100,8 +119,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/tv_anio_creacion"
-                app:layout_constraintTop_toBottomOf="@+id/tv_poder" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_poder_detalle" />
 
             <TextView
                 android:id="@+id/tv_color"
@@ -109,8 +130,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/color"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_anio_creacion"
-                app:layout_constraintTop_toBottomOf="@+id/tv_anio_creacion" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_anio_creacion_detalle" />
 
             <TextView
                 android:id="@+id/tv_color_detalle"
@@ -118,14 +141,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/tv_color"
-                app:layout_constraintTop_toBottomOf="@+id/tv_anio_creacion" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_anio_creacion_detalle" />
 
             <TextView
                 android:id="@+id/tv_traduccion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/primary_text"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/iv_detalle"
                 app:layout_constraintStart_toStartOf="@+id/tv_color"
                 app:layout_constraintTop_toBottomOf="@+id/tv_color" />
