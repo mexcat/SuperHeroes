@@ -9,5 +9,14 @@
         android:id="@+id/listaSuperHeroesFragment"
         android:name="cl.gencina.superheroes.vista.ListaSuperHeroesFragment"
         android:label="fragment_lista_super_heroes"
-        tools:layout="@layout/fragment_lista_super_heroes" />
+        tools:layout="@layout/fragment_lista_super_heroes" >
+        <action
+            android:id="@+id/action_listaSuperHeroesFragment_to_detalleSuperHeroeFragment"
+            app:destination="@id/detalleSuperHeroeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleSuperHeroeFragment"
+        android:name="cl.gencina.superheroes.vista.DetalleSuperHeroeFragment"
+        android:label="fragment_detalle_super_heroe"
+        tools:layout="@layout/fragment_detalle_super_heroe" />
 </navigation>

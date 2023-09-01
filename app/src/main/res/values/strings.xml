@@ -2,4 +2,11 @@
     <string name="app_name">SuperHeroes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre">Nombre: </string>
+    <string name="origen">Origen:</string>
+    <string name="poder">Poder:</string>
+    <string name="anio_de_creacion">Año de creación:</string>
+    <string name="color">Color:</string>
+    <string name="traduccion_si">Cuenta con traducción al español</string>
+    <string name="traduccion_no">Sin traducción</string>
 </resources>

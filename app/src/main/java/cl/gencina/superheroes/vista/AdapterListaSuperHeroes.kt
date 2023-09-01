@@ -1,8 +1,11 @@
 package cl.gencina.superheroes.vista
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import cl.gencina.superheroes.R
 import cl.gencina.superheroes.data.local.SuperHeroeEntity
 import cl.gencina.superheroes.databinding.ItemListaBinding
 import coil.load
@@ -40,7 +43,12 @@ class AdapterListaSuperHeroes: RecyclerView.Adapter<AdapterListaSuperHeroes.List
         fun bind(superHeroe:SuperHeroeEntity){
             v.ivItem.load(superHeroe.imagenLink)
             v.tvModelo.text = superHeroe.nombre
+            v.cvItem.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putInt("id", superHeroe.id)
+                Navigation.findNavController(v.root).navigate(R.id.action_listaSuperHeroesFragment_to_detalleSuperHeroeFragment, bundle)
 
+            }
         }
     }
 }
